@@ -5,28 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mana spēle</title>
 <style>
+/* Pamata izkārtojums — šīs rindas nemaini */
 body { font-family: Arial, sans-serif; max-width: 680px; margin: 24px auto; padding: 16px; line-height: 1.6; }
-button, input { font: inherit; padding: 10px; margin: 4px; }
-button { cursor: pointer; }
-img { max-width: 100%; height: auto; }
+button, input { font: inherit; padding: 10px 16px; margin: 6px 0; cursor: pointer; }
+img, audio { max-width: 100%; }
 [hidden] { display: none !important; }
-body { background-color: #ffeded; color: #17212b; }
-button { background-color: #722491; color: white; border: 0; border-radius: 16px; }
+
+/* NOFORMĒ ŠEIT: pielieto 2.1. un 2.2. nodarbībā apgūto CSS */
+body {
+  background-color: #d09eff;
+  color: #222222;
+}
+
+h1 {
+  color: #222222;
+}
+
+.noteikumi {
+  background-color: #8093ff;
+  color: #222222;
+  padding: 12px;
+}
+
+.laukums {
+  width: 360px;
+  padding: 12px;
+  border: 2px solid #aa94b8;
+  background-color: #eaa4ff;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #7b2491;
+  color: #ffffff;
+  border-radius: 10px;
+}
 </style>
 </head>
 <body>
-<h1 style="text-align: center;">harambe simulator</h1>
-<p>Savāc piecus mērkaķus. Spied uz mērkaķi, lai iegūtu punktus.</p>
-<img src="vīriņš.png" alt="Zils kvadrātveida robots" width="128">
-<p>Uzvaras skaņa:</p>
-<audio controls src="findyourwings.mp3"></audio>
-<p>Dziesma no: Tyler, The Creator.</p>
-<p>Piedalās: Roy Ayers, Syd Bennett, Jameel Kirk Bruner, Samantha Nelson, Tiffany Palmer, Onitsha Shaw un Kali Uchis.</p>
-<p>℗ 2025 & © 2015 Columbia Records, divīzija no Sony Music Entertainment.</p>
-<p id="punkti">Punkti: 0</p>
-<button onclick="savakt()">Savākt mērkaķi</button>
+<h1>Tranzīts</h1>
+<p>Jākustas cauri laikumam un jānošauda ienaidnieki.</p>
+<section class="noteikumi">
+  <h2>Noteikumi</h2>
+  <p>Nošaudi ienaidnieku, lai iegūtu punktus.</p>
+</section>
+<div class="laukums">
+  <h2>Spēles laukums</h2>
+  <img src="textures/vīriņš.png" alt="Spēles varonis" width="128">
+  <p>Skaņas efekta nozīme spēlē:</p>
+  <audio controls src="sound/click.wav"></audio>
+  <p id="punkti">Punkti: 0</p>
+  <button onclick="savakt()">Nošaudi</button>
+</div>
 <script>
-// Gatava poga. Šajā tēmā mācies noformēt lapu un sakārtot failus.
+// Gatava punktu poga — šo skriptu nemaini.
 let punkti = 0;
 function savakt() {
   punkti = punkti + 1;
@@ -35,3 +67,4 @@ function savakt() {
 </script>
 </body>
 </html>
+
