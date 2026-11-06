@@ -3,3 +3,5 @@
 tev vajag google vai kautko tamlīdzīgu lai izmantotu šo spēli.
 vinkārši paņem .html file un izmanto viņu iekšā pārlūkā
 skaņas ir iekšā "sound" mapē, bildes/tekstūras - "textures" mapē.
+lielākajai daļai no lietām ir apaļi stūri, jo tas atspulgo kompāniju dizainu šajās dienās.
+visam ir violeta krāsu palete, jo tā ir mana mīļākā krāsa.
